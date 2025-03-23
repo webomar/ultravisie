@@ -182,3 +182,18 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 # if untrusted users are allowed to upload files -
 # see https://docs.wagtail.org/en/stable/advanced_topics/deploying.html#user-uploaded-files
 WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
+
+
+
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "mail.ultravisie.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True  # Must be True for port 587
+EMAIL_USE_SSL = False  # Do not use SSL if using TLS
+EMAIL_HOST_USER = "photo@ultravisie.com"
+EMAIL_HOST_PASSWORD = "a@+S$(C6BI.A"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+

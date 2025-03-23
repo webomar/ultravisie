@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <nav class="navbar navbar-expand-lg">
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="/">
                                     <img src="{% static 'assets/images/Ultra-1.png' %}" alt="Logo" width="200px">
                                 </a>
 
@@ -73,20 +73,17 @@
 
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
                                     <ul class="navbar-nav m-auto">
-                                        <li class="nav-item active">
-                                            <a class="page-scroll" href="#home">HOME</a>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="/#service">DIENSTEN</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#service">DIENSTEN</a>
+                                            <a class="page-scroll" href="/#pricing">PRIJZEN</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#pricing">PRIJZEN</a>
+                                            <a class="page-scroll" href="/#voorbeelden">Voorbeelden</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#voorbeelden">Voorbeelden</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="page-scroll" href="#contact">CONTACT</a>
+                                            <a class="" href="/contact">CONTACT</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -130,7 +127,7 @@
                         </div>
                     </div> <!-- row -->
                     <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-6">
+                        {% comment %} <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="footer-link">
                                 <h6 class="footer-title">Bedrijf</h6>
                                 <ul>
@@ -139,18 +136,17 @@
                                     <li><a href="#">Carrières</a></li>
                                 </ul>
                             </div> <!-- footer link -->
-                        </div>
+                        </div> {% endcomment %}
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="footer-link">
-                                <h6 class="footer-title">Producten & Diensten</h6>
+                                <h6 class="footer-title">Contact</h6>
                                 <ul>
-                                    <li><a href="#">Producten</a></li>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Developer</a></li>
+                                    <li><a href="#">info@ultravisie.nl</a></li>
+                                    <li><a href="#">0685600988</a></li>
                                 </ul>
                             </div> <!-- footer link -->
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-5">
+                        {% comment %} <div class="col-lg-3 col-md-4 col-sm-5">
                             <div class="footer-link">
                                 <h6 class="footer-title">Hulp & Ondersteuning</h6>
                                 <ul>
@@ -171,7 +167,7 @@
                                 </div>
                                 <p class="text">Abonneer op onze wekelijkse nieuwsbrief om op de hoogte te blijven. We sturen geen spam.</p>
                             </div> <!-- footer newsletter -->
-                        </div>
+                        </div> {% endcomment %}
                     </div> <!-- row -->
                 </div> <!-- container -->
             </div> <!-- footer widget -->
