@@ -1,0 +1,368 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+
+<!--====== SERVICES PART START ======-->
+<div id="home" class="header-hero bg_cover" style="background-image: url({% static 'assets/images/header-bg.jpg' %})">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                <div class="header-content text-center">
+                    <h3 class="header-title">Uw Partner in Webontwikkeling</h3>
+                    <p class="text">Bij Ultravisie creëren we op maat gemaakte websites die perfect passen bij uw merk. <br>Of u nu een klein bedrijf of een grote onderneming bent, wij zorgen voor een online aanwezigheid die indruk maakt.</p>
+                    <ul class="header-btn">
+                        <li><a class="main-btn btn-one" rel="nofollow" href="#contact">Neem Contact Op</a></li>
+                        <li><a class="main-btn btn-one" rel="nofollow" href="#contact">Gratis demo aanvragen</a></li>
+                        {% comment %} <li><a class="main-btn btn-two video-popup" href="https://www.youtube.com/watch?v=r44RKWyfcFw">Bekijk Onze Diensten <i class="lni-play"></i></a></li> {% endcomment %}
+                    </ul>
+                </div> <!-- header content -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="header-shape">
+        <img src="{% static 'assets/images/header-shape.svg' %}" alt="shape">
+    </div>
+</div>
+
+
+<section id="service" class="services-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title pb-10">
+                    <h4 class="title">Onze Expertise</h4>
+                    <p class="text">Wij helpen bedrijven met het bouwen van sterke, resultaatgerichte websites die hun doelgroep aanspreken en groei bevorderen. Ontdek onze diensten hieronder!</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="services-content mt-40 d-sm-flex">
+                            <div class="services-icon">
+                                <i class="lni-laptop"></i>
+                            </div>
+                            <div class="services-content media-body">
+                                <h4 class="services-title">Webdesign</h4>
+                                <p class="text">Het creëren van mooie, gebruiksvriendelijke websites die de beste gebruikerservaring bieden voor uw bezoekers.</p>
+                            </div>
+                        </div> <!-- services content -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="services-content mt-40 d-sm-flex">
+                            <div class="services-icon">
+                                <i class="lni-code"></i>
+                            </div>
+                            <div class="services-content media-body">
+                                <h4 class="services-title">Webontwikkeling</h4>
+                                <p class="text">Van eenvoudige landingspagina's tot complexe eCommerce-platforms, wij brengen uw visie tot leven met moderne technologieën.</p>
+                            </div>
+                        </div> <!-- services content -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="services-content mt-40 d-sm-flex">
+                            <div class="services-icon">
+                                <i class="lni-seo"></i>
+                            </div>
+                            <div class="services-content media-body">
+                                <h4 class="services-title">SEO & Digitale Marketing</h4>
+                                <p class="text">Onze SEO-experts zorgen ervoor dat uw website hoog in zoekmachines scoort, wat organisch verkeer genereert en de zichtbaarheid vergroot.</p>
+                            </div>
+                        </div> <!-- services content -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="services-content mt-40 d-sm-flex">
+                            <div class="services-icon">
+                                <i class="lni-support"></i>
+                            </div>
+                            <div class="services-content media-body">
+                                <h4 class="services-title">Doorlopende Ondersteuning</h4>
+                                <p class="text">We bouwen niet alleen websites – we bieden langdurige ondersteuning om ervoor te zorgen dat uw site up-to-date, veilig en geoptimaliseerd blijft.</p>
+                            </div>
+                        </div> <!-- services content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- row -->
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="services-image d-lg-flex align-items-center">
+        <div class="image">
+            <img src="{% static 'assets/images/services.png' %}" alt="Diensten">
+        </div>
+    </div> <!-- services image -->
+</section>
+
+<!--====== SERVICES PART ENDS ======-->
+
+<!--====== PRICING PART START ======-->
+
+<section id="pricing" class="pricing-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-10">
+                    <h4 class="title">Onze Prijzen</h4>
+                    <p class="text">Betaalbare pakketten die geschikt zijn voor bedrijven van alle groottes. Geen verborgen kosten – gewoon eerlijke, transparante prijzen.</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-pricing mt-40">
+                    <div class="pricing-header text-center">
+                        <h5 class="sub-title">Basis</h5>
+                        <span class="price">€ 199</span>
+                        {% comment %} <p class="year">per project</p> {% endcomment %}
+                    </div>
+                    <div class="pricing-list">
+                        <ul>
+                            <li><i class="lni-check-mark-circle"></i> 1-pagina website</li>
+                            <li><i class="lni-check-mark-circle"></i> Basis SEO</li>
+                            <li><i class="lni-check-mark-circle"></i> Mobielvriendelijk ontwerp</li>
+                            <li><i class="lni-check-mark-circle"></i> 1 maand ondersteuning</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-btn text-center">
+                        <a class="main-btn" href="#">START NU</a>
+                    </div>
+                </div> <!-- single pricing -->
+            </div>
+            
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-pricing pro mt-40">
+                    <div class="pricing-baloon">
+                        <img src="{% static 'assets/images/mobile-phone-svgrepo-com.svg' %}" alt="baloon">
+                    </div>
+                    <div class="pricing-header">
+                        <h5 class="sub-title">Pro</h5>
+                        <span class="price">€ 599</span>
+                        {% comment %} <p class="year">per project</p> {% endcomment %}
+                    </div>
+                    <div class="pricing-list">
+                        <ul>
+                            <li><i class="lni-check-mark-circle"></i> Tot 7 pagina's</li>
+                            <li><i class="lni-check-mark-circle"></i> Geavanceerde SEO</li>
+                            <li><i class="lni-check-mark-circle"></i> Aangepast ontwerp</li>
+                            <li><i class="lni-check-mark-circle"></i> 3 maanden ondersteuning</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-btn text-center">
+                        <a class="main-btn" href="#">START NU</a>
+                    </div>
+                </div> <!-- single pricing -->
+            </div>
+            
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-pricing enterprise mt-40">
+                    <div class="pricing-flower">
+                        <img src="{% static 'assets/images/tech-color-laptop-front-svgrepo-com.svg' %}" alt="flower">
+                    </div>
+                    <div class="pricing-header text-right">
+                        <h5 class="sub-title">Enterprise</h5>
+                        <span class="price">€ 999</span>
+                        {% comment %} <p class="year">per project</p> {% endcomment %}
+                    </div>
+                    <div class="pricing-list">
+                        <ul>
+                            <li><i class="lni-check-mark-circle"></i> Onbeperkt aantal pagina's</li>
+                            <li><i class="lni-check-mark-circle"></i> Premium SEO</li>
+                            <li><i class="lni-check-mark-circle"></i> E-commerce integratie</li>
+                            <li><i class="lni-check-mark-circle"></i> 6 maanden ondersteuning</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-btn text-center">
+                        <a class="main-btn" href="#">START NU</a>
+                    </div>
+                </div> <!-- single pricing -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== PRICING PART ENDS ======-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content" id="voorbeelden">
+    
+    <div class="container">
+      <h2 class="my-5 text-center">Websites hebben we gemaakt</h2>
+
+      <div class="d-flex carousel-nav">
+        <a href="#" class="col active">Bestefix</a>
+        <a href="#" class="col">Teimlogistiek</a>
+        <a href="#" class="col">CT Clean Service</a>
+      </div>
+
+
+      <div class="owl-carousel owl-1">
+
+        <div class="media-29101 d-md-flex w-100">
+            <div class="img shadoww m-4">
+                <img src="{% static 'assets/images/screen1.png' %}" alt="Image" class="img-fluid">
+            </div>
+
+            <div class="text">
+            <a class="category d-block mb-4" href="https://bestefix.nl/">Bestefix.nl</a>
+            <h2>Bestefix Bouwbedrijf Amsterdam</h2>
+            <p>Bestefix is een bouwbedrijf gevestigd in Amsterdam waarvoor we een website hebben gecreëerd (Nederlands & Engels) die hun breed scala aan bouw- en renovatiediensten op een professionele manier presenteert. <br><br>Deze website biedt een strakke uitstraling, eenvoudige navigatie en is volledig geoptimaliseerd voor zowel desktop als mobiele apparaten, zodat hun klanten altijd toegang hebben tot hun diensten.</p>
+            <br>
+            <a href="https://bestefix.nl/" target="_blank" class="text-primary"> Bezoek website...</a>
+        </div>
+        </div> <!-- .item -->
+
+        <div class="media-29101 d-md-flex w-100">
+            <div class="img shadoww m-4">
+                <img src="{% static 'assets/images/screen2.png' %}" alt="Image" class="img-fluid">
+            </div>
+          <div class="text">
+            <a class="category d-block mb-4" href="https://teimlogistiek.nl/">Teimlogistiek.nl</a>
+            <h2>Verhuisbedrijf Teim Logistiek</h2>
+            <p>Teim Logistiek is een verhuisbedrijf dat we hebben geholpen met het ontwikkelen van een moderne en gebruiksvriendelijke website. Deze site biedt klanten een eenvoudig overzicht van hun verhuisdiensten, inclusief tarieven en contactinformatie. We hebben gezorgd voor een strakke interface en intuïtieve navigatie, zodat klanten snel de juiste informatie kunnen vinden. De website is volledig responsief en geoptimaliseerd voor alle apparaten, van desktop tot mobiel.</p>
+            <br>
+            <a href="https://teimlogistiek.nl/" target="_blank" class="text-primary"> Bezoek website...</a>
+          </div>
+        </div> <!-- .item -->
+
+        <div class="media-29101 d-md-flex w-100">
+            <div class="img shadoww m-4">
+                <img src="{% static 'assets/images/screen3.png' %}" alt="Image" class="img-fluid">
+            </div>
+          <div class="text">
+            <a class="category d-block mb-4" href="https://ct-cleanservice.nl/">ct-cleanservice.nl</a>
+            <h2>CT Schoonmaakbedrijf</h2>
+            <p>Voor CT Clean Service hebben we een website ontwikkeld die hun professionele schoonmaakdiensten op een overzichtelijke manier presenteert. De website is eenvoudig te navigeren en biedt klanten de mogelijkheid om snel contact op te nemen of een offerte aan te vragen. Met een focus op snelheid, responsiviteit en een gebruiksvriendelijke interface is de website geoptimaliseerd voor zowel desktop als mobiele apparaten, zodat klanten altijd en overal toegang hebben.</p>
+            <br>
+            <a href="https://ct-cleanservice.nl/" target="_blank" class="text-primary"> Bezoek website...</a>
+          </div>
+        </div> <!-- .item -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--====== CALL TO ACTION PART START ======-->
+
+<section id="call-to-action" class="call-to-action">
+    <div class="call-action-image">
+        <img src="{% static 'assets/images/call-to-action.png' %}" alt="call-to-action">
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-lg-6">
+                <div class="call-action-content text-center">
+                    <h2 class="call-title">Laten we samen uw website bouwen</h2>
+                    <p class="text">Neem vandaag nog contact met ons op om uw project te starten. Wij zetten uw ideeën om in een krachtige online aanwezigheid.</p>
+                    <div class="call-newsletter">
+                        <i class="lni-envelope"></i>
+                        <input type="text" placeholder="john@email.com">
+                        <button type="submit">ABONNEER</button>
+                    </div>
+                </div> <!-- call-action-content -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== CALL TO ACTION PART ENDS ======-->
+
+<!--====== CONTACT PART START ======-->
+
+<section id="contact" class="contact-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-10">
+                    <h4 class="title">Neem Contact Op</h4>
+                    <p class="text">Heeft u een project in gedachten? Laten we praten en kijken hoe we uw ideeën werkelijkheid kunnen maken.</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <form id="contact-form" action="assets/contact.php" method="post" data-toggle="validator">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="name" placeholder="Uw Naam" data-error="Naam is verplicht." required="required">
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="email" name="email" placeholder="Uw Email" data-error="Een geldig emailadres is verplicht." required="required">
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="subject" placeholder="Onderwerp" data-error="Onderwerp is verplicht." required="required">
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="phone" placeholder="Telefoon" data-error="Telefoonnummer is verplicht." required="required">
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-12">
+                                <div class="single-form form-group">
+                                    <textarea placeholder="Uw Bericht" name="message" data-error="Laat ons alstublieft een bericht achter." required="required"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- single form -->
+                            </div>
+                            <p class="form-message"></p>
+                            <div class="col-md-12">
+                                <div class="single-form form-group text-center">
+                                    <button type="submit" class="main-btn">Verstuur Bericht</button>
+                                </div> <!-- single form -->
+                            </div>
+                        </div> <!-- row -->
+                    </form>
+                </div> <!-- contact-form -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== CONTACT PART ENDS ======-->
+
+{% endblock content %}

@@ -1,0 +1,247 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+            {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+            {% wagtail_site as current_site %}
+            {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        {% if page.search_description %}
+        <meta name="description" content="{{ page.search_description }}" />
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Force all links in the live preview panel to be opened in a new tab #}
+        {% if request.in_preview_panel %}
+        <base target="_blank">
+        {% endif %}
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/ultravisie.css' %}">
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" type="image/png">
+        
+        <!--====== Bootstrap css ======-->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        
+        <!--====== Line Icons css ======-->
+        <link rel="stylesheet" href="{% static 'assets/css/LineIcons.css' %}">
+        
+        <!--====== Magnific Popup css ======-->
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+        
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+        
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        
+
+
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+        {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+        <header class="header-area">
+            <div class="navgition navgition-transparent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg">
+                                <a class="navbar-brand" href="#">
+                                    <img src="{% static 'assets/images/Ultra-1.png' %}" alt="Logo" width="200px">
+                                </a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                                    <ul class="navbar-nav m-auto">
+                                        <li class="nav-item active">
+                                            <a class="page-scroll" href="#home">HOME</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#service">DIENSTEN</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#pricing">PRIJZEN</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#voorbeelden">Voorbeelden</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#contact">CONTACT</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {% comment %} <div class="navbar-social d-none d-sm-flex align-items-center">
+                                    <span>VOLG ONS</span>
+                                    <ul>
+                                        <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                                        <li><a href="#"><i class="lni-twitter-original"></i></a></li>
+                                        <li><a href="#"><i class="lni-instagram-original"></i></a></li>
+                                        <li><a href="#"><i class="lni-linkedin-original"></i></a></li>                                  
+                                    </ul>
+                                </div> {% endcomment %}
+                            </nav> <!-- navbar -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- navgition -->
+        </header>
+
+        <!--====== HEADER PART ENDS ======-->
+
+        {% block content %}{% endblock %}
+        <footer id="footer" class="footer-area">
+            <div class="footer-widget">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer-logo-support d-md-flex align-items-end justify-content-between">
+                                <div class="footer-logo d-flex align-items-end">
+                                    <a class="mt-30" href="index.html"><img src="{% static 'assets/images/Ultra-1.png' %}" alt="Logo" width="200px"></a>
+    
+                                    {% comment %} <ul class="social mt-30">
+                                        <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                                        <li><a href="#"><i class="lni-twitter-original"></i></a></li>
+                                        <li><a href="#"><i class="lni-instagram-original"></i></a></li>
+                                        <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                    </ul> {% endcomment %}
+                                </div> <!-- footer logo -->
+                            </div> <!-- footer logo support -->
+                        </div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <div class="footer-link">
+                                <h6 class="footer-title">Bedrijf</h6>
+                                <ul>
+                                    <li><a href="#">Over ons</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Carrières</a></li>
+                                </ul>
+                            </div> <!-- footer link -->
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer-link">
+                                <h6 class="footer-title">Producten & Diensten</h6>
+                                <ul>
+                                    <li><a href="#">Producten</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Developer</a></li>
+                                </ul>
+                            </div> <!-- footer link -->
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-5">
+                            <div class="footer-link">
+                                <h6 class="footer-title">Hulp & Ondersteuning</h6>
+                                <ul>
+                                    <li><a href="#">Support Center</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Algemene Voorwaarden</a></li>
+                                </ul>
+                            </div> <!-- footer link -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-7">
+                            <div class="footer-newsletter">
+                                <h6 class="footer-title">Nieuwsbrief Abonneren</h6>
+                                <div class="newsletter">
+                                    <form action="#">
+                                        <input type="text" placeholder="Uw E-mail">
+                                        <button type="submit"><i class="lni-angle-double-right"></i></button>
+                                    </form>
+                                </div>
+                                <p class="text">Abonneer op onze wekelijkse nieuwsbrief om op de hoogte te blijven. We sturen geen spam.</p>
+                            </div> <!-- footer newsletter -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- footer widget -->
+            
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright text-center">
+                                <p class="text">Gemaakt door <a rel="nofollow" href="https://ultravisie.nl">Ultravisie</a> </p>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- footer copyright -->
+        </footer>
+    
+        <!--====== FOOTER PART ENDS ======-->
+    
+        <!--====== BACK TO TOP PART START ======-->
+    
+        <a class="back-to-top" href="#"><i class="lni-chevron-up"></i></a>
+    
+        <!--====== BACK TO TOP PART ENDS ======-->
+    
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/ultravisie.js' %}"></script>
+
+        {% block extra_js %}
+        {# Override this in templates to add extra javascript #}
+        {% endblock %}
+
+        <!--====== jquery js ======-->
+        <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+        <!--====== Bootstrap js ======-->
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+
+        <!--====== Ajax Contact js ======-->
+        <script src="{% static 'assets/js/ajax-contact.js' %}"></script>
+
+        <!--====== Scrolling Nav js ======-->
+        <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+        <script src="{% static 'assets/js/scrolling-nav.js' %}"></script>
+
+        <!--====== Validator js ======-->
+        {% comment %} <script src="{% static 'assets/js/validator.min.js' %}"></script> {% endcomment %}
+
+        <!--====== Magnific Popup js ======-->
+        <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+
+        <!--====== Main js ======-->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+        {% comment %} <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script> {% endcomment %}
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        
+
+
+
+
+
+
+
+
+    </body>
+</html>
